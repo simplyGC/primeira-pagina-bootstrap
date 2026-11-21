@@ -1,0 +1,27 @@
+1. Diferença entre uma etiqueta HTML e uma classe Bootstrap
+Etiqueta HTML (como <div>, <p>, <button>): Define a estrutura e o significado do conteúdo na página. É a "matéria-prima" que diz ao navegador o que é cada elemento (um parágrafo, um botão, um bloco, etc.).
+
+Classe Bootstrap (como btn btn-primary ou text-center): É um conjunto de regras de estilo e comportamento pré-definidas (escritas em CSS) que aplicas dentro do atributo class="..." de uma etiqueta HTML para lhe dar aspeto visual, alinhamento ou responsividade sem teres de escrever o CSS de raiz.
+
+2. Onde se carregam o CSS e o JavaScript? O que deixa de funcionar sem o script?
+Onde se carregam:
+
+O CSS carrega-se dentro da secção <head> (através da etiqueta <link>), para que a página já apareça estilizada assim que começa a ser desenhada.
+
+O JavaScript carrega-se normalmente no final do <body>, mesmo antes da etiqueta de fecho </body> (através da etiqueta <script>), garantindo que todos os elementos HTML já existem na página antes de o código tentar manipulá-los.
+
+O que deixa de funcionar se o script (JS) não carregar: O visual estático (cores, tamanhos, grelha) mantém-se, mas toda a interatividade deixa de funcionar. No caso do Bootstrap, deixam de abrir menus dropdown, janelas modal, acordeões (collapse), carrosséis e alertas que se fecham ao clicar.
+
+3. O que significa col-12 col-md-6?
+O sistema de grelha (grid) do Bootstrap divide a largura do ecrã em 12 colunas. Essa combinação define um comportamento responsivo:
+
+col-12: Em ecrãs pequenos (telemóveis, abaixo do breakpoint md), o elemento ocupa 12 de 12 colunas — ou seja, 100% da largura disponível (os blocos ficam empilhados uns por baixo dos outros).
+
+col-md-6: A partir de ecrãs médios (md, como tablets ou portáteis, ≥ 768px) para cima, o elemento passa a ocupar 6 de 12 colunas — ou seja, 50% da largura (permitindo colocar dois blocos lado a lado na mesma linha).
+
+4. Diferença entre guardar no editor, fazer commit e fazer push
+Guardar no editor (Ctrl+S): Grava apenas as alterações feitas nos ficheiros diretamente no disco local do teu computador. Não cria histórico de versões nem partilha nada com ninguém.
+
+Fazer commit (git commit): Cria um "ponto de gravação" (registo histórico) permanente no teu repositório Git local, acompanhado de uma mensagem a descrever o que foi alterado. Permite voltar atrás se algo correr mal, mas continua apenas na tua máquina.
+
+Fazer push (git push): Envia todos os commits que fizeste localmente para um repositório remoto (como o GitHub ou GitLab), atualizando o projeto na nuvem para que outras pessoas (ou tu, noutro computador) possam ver e descarregar as alterações.
